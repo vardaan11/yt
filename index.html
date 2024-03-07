@@ -38,7 +38,7 @@
                     var description = item.snippet.description;
                     var thumbnailUrl = item.snippet.thumbnails.default.url; // Fetching thumbnail
 
-                    results.innerHTML += `<h2>${title}</h2><p>${description}</p><img src="${thumbnailUrl}" alt="${title}"><iframe width="560" height="315"  src="https://www.youtube.com/embed/${videoId}" referrerpolicy="no-referrer-when-downgrade" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+                    results.innerHTML += `<h2>${title}</h2><p>${description}</p><img src="${thumbnailUrl}" alt="${title}"><iframe width="560" height="315"  src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
                 });
 
                 nextPageToken = data.nextPageToken;
@@ -53,6 +53,8 @@
           }
         }
       };
+
+      document.cookie = "key=value; SameSite=Lax";
 </script>
 
 </body>
