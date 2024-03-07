@@ -38,7 +38,7 @@
                     var description = item.snippet.description;
                     var thumbnailUrl = item.snippet.thumbnails.default.url; // Fetching thumbnail
 
-                    results.innerHTML += `<h2>${title}</h2><p>${description}</p><img src="https://www.youtube.com/embed/${videoId}" alt="${title}"><iframe width="560" height="315"  src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+                    results.innerHTML += `<h2>${title}</h2><p>${description}</p><a href="https://www.youtube.com/embed/${videoId}" target = "_blank"><img src="${thumbnailUrl}" alt="${title}"></a><iframe width="560" height="315"  src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
                 });
 
                 nextPageToken = data.nextPageToken;
